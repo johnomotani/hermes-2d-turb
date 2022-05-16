@@ -1,0 +1,6 @@
+.BOUT.pid.*
+BOUT.dmp.*.nc
+BOUT.restart.*.nc
+BOUT.log.*
+BOUT.settings
+*.gif
