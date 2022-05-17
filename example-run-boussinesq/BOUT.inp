@@ -95,7 +95,6 @@ nonuniform=true
 # Electrostatic potential solver
 
 [phiSolver]
-type = multigrid
 inner_boundary_flags = 1
 outer_boundary_flags = 16  # INVERT_SET  (2.8 * Te)
 
@@ -198,7 +197,7 @@ ion_viscosity  = false  # Ion parallel viscosity
 thermal_conduction = false
 poloidal_flows = false  # Include ExB flows in the X-Y plane?
 parallel_flow = false
-boussinesq = false   # Use Boussinesq approximation?
+boussinesq = true   # Use Boussinesq approximation? [always true currently]
 
 frecycle = 0.99  # Neutral gas recycling fraction
 
