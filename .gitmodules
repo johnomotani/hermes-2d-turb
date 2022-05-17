@@ -1,4 +1,3 @@
-[submodule "hermes-2"]
-	path = hermes-2
-	url = git@github.com:johnomotani/hermes-2
-	branch = john-dev
+[submodule "hermes-3"]
+	path = hermes-3
+	url = git@github.com:johnomotani/hermes-3
