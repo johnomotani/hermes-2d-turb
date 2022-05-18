@@ -51,14 +51,14 @@ function = 1.0 + 1e-3*mixmode(x)*mixmode(z)
 
 x0 = 0.2
 width = 0.02
-source = 1e4 * exp(-((x-x0)/width)^2) # Units Nnorm/s
+source = 1e23 * exp(-((x-x0)/width)^2) # Units Nnorm/s
 
 bndry_all = neumann
 
 [Pe]
 function = Ne:function
 
-source = Ne:source
+source = Ne:source * hermes:Tnorm * 1.602176634e-19
 
 bndry_all = neumann
 
@@ -79,7 +79,7 @@ function = Ne:function
 [Ph+]
 function = `Nh+:function`
 
-source = Ne:source
+source = Ne:source * hermes:Tnorm * 1.602176634e-19
 
 bndry_all = neumann
 
@@ -95,3 +95,4 @@ split_n0 = false  # Split phi into n=0 and n!=0 components
 [sheath_closure]
 connection_length = 10 # meters
 potential_offset = 0.0  # Potential at which sheath current is zero
+sinks = true
