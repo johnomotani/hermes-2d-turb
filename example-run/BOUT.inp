@@ -8,8 +8,8 @@ nx = 260
 ny = 1
 nz = 256
 
-Lrad = 0.05  # Radial width of domain [m]
-Lpol = 0.05  # Poloidal size of domain [m]
+Lrad = 0.3  # Radial width of domain [m]
+Lpol = 0.3  # Poloidal size of domain [m]
 
 Bpxy = 1.0  # Poloidal magnetic field [T]
 Rxy = 1.5   # Major radius [meters]
@@ -93,6 +93,6 @@ poloidal_flows = false  # Include poloidal ExB flow
 split_n0 = false  # Split phi into n=0 and n!=0 components
 
 [sheath_closure]
-connection_length = 10 # meters
+connection_length = 50 # meters
 potential_offset = 0.0  # Potential at which sheath current is zero
 sinks = true
